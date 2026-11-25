@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in | Chorwet Common Place</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="auth-body">
+    <section class="auth-brand-panel">
+        <a class="brand" href="index.html" aria-label="Chorwet Common Place home">
+            <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+            <span>Chorwet Common Place</span>
+        </a>
+        <div class="auth-quote">
+            <p class="eyebrow"><span></span> Welcome back</p>
+            <h1>Ideas become<br><em>possible</em> here.</h1>
+            <p>Log in to continue conversations and find new circles of people worth knowing.</p>
+        </div>
+    </section>
+    <main class="auth-form-panel">
+        <form class="auth-card" id="login-form">
+            <h2 id="auth-title">Good to see you.</h2>
+            <p id="auth-description">Enter your details to join the conversation.</p>
+            <label class="field">
+                <span id="identity-label">Username or email</span>
+                <input type="text" id="username" name="username" autocomplete="username"
+                    placeholder="Your username or email" required>
+            </label>
+            <label class="field" id="email-field" hidden>
+                <span>Email</span>
+                <input type="email" id="email" name="email" autocomplete="email" placeholder="you@example.com">
+            </label>
+            <label class="field">
+                <span>Password</span>
+                <input type="password" id="password" name="password" autocomplete="current-password"
+                    placeholder="Your password" required>
+            </label>
+            <button class="button button-dark" type="submit" id="auth-submit">Log in <span
+                    aria-hidden="true">→</span></button>
+            <p class="auth-result" id="result" role="status"></p>
+            <button class="auth-mode-toggle" id="auth-mode-toggle" type="button">
+                <span id="auth-mode-prompt">New to Chorwet Common Place?</span>
+                <strong id="auth-mode-action">Create an account</strong>
+            </button>
+            <a class="auth-back" href="index.html">← Back to home</a>
+        </form>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>

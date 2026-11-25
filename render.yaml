@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: chorwet-common-place
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app --bind 0.0.0.0:$PORT
+    rootDir: backend
+    envVars:
+      - key: SECRET_KEY
+        generateValue: true
+      - key: COOKIE_SECURE
+        value: "true"
+      - key: DATABASE_PATH
+        value: /var/data/users.db
+      - key: UPLOADS_DIR
+        value: /var/data/uploads
+    disk:
+      name: chorwet-data
+      mountPath: /var/data
+      sizeGB: 1

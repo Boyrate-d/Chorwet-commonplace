@@ -1,0 +1,9 @@
+__pycache__/
+*.py[cod]
+.env
+.venv/
+venv/
+users.db
+backend/users.db
+backend/uploads/
+.DS_Store

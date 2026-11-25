@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Chorwet Common Place</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body class="dashboard-body">
+    <aside class="dashboard-sidebar">
+        <a class="brand dashboard-brand" href="/dashboard">
+            <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+            <span>Chorwet</span>
+        </a>
+        <nav class="dashboard-nav" aria-label="Dashboard navigation">
+            <button class="dashboard-nav-item active" data-view="feed" type="button">Home</button>
+            <button class="dashboard-nav-item" data-view="friends" type="button">Followers</button>
+            <button class="dashboard-nav-item" data-view="events" type="button">Events</button>
+            <button class="dashboard-nav-item" data-view="announcements" type="button">Announcements</button>
+            <button class="dashboard-nav-item" data-view="culture" type="button">Culture &amp; heritage</button>
+            <button class="dashboard-nav-item" data-view="about" type="button">About</button>
+            <button class="dashboard-nav-item" data-view="profile" type="button">My profile</button>
+        </nav>
+        <button class="button button-dark dashboard-logout" id="dashboard-logout" type="button">Log out</button>
+    </aside>
+
+    <main class="dashboard-main">
+        <header class="dashboard-header">
+            <div>
+                <p class="dashboard-eyebrow">Your community</p>
+                <h1 id="dashboard-title">Good morning, <span id="dashboard-user">friend</span>.</h1>
+            </div>
+            <span class="dashboard-avatar" id="dashboard-avatar">C</span>
+        </header>
+
+        <section class="dashboard-view active" id="view-feed">
+            <form class="post-composer" id="post-form">
+                <textarea id="post-content" name="content" rows="3" maxlength="500" placeholder="Share an idea, question, or update..."></textarea>
+                <div class="post-composer-actions">
+                    <label class="upload-button" for="post-media">Add photo/video</label>
+                    <input id="post-media" name="media" type="file" accept="image/jpeg,image/png,image/gif,image/webp,video/mp4,video/webm,video/quicktime">
+                    <span class="upload-name" id="upload-name">No file selected</span>
+                    <button class="button button-primary" type="submit">Share post</button>
+                </div>
+            </form>
+            <div class="feed-list" id="feed-list"></div>
+        </section>
+
+        <section class="dashboard-view" id="view-friends">
+            <div class="section-title-row">
+                <h2>Your network</h2>
+                <div class="network-tabs">
+                    <button class="network-tab active" data-network="followers" type="button">Followers <span id="followers-count">0</span></button>
+                    <button class="network-tab" data-network="following" type="button">Following <span id="following-count">0</span></button>
+                </div>
+            </div>
+                <div class="people-grid" id="network-list"></div>
+                <h2>Find people to follow</h2>
+                <div class="people-grid" id="follow-suggestions"></div>
+        </section>
+
+        <section class="dashboard-view" id="view-events">
+            <div class="section-title-row">
+                <div>
+                    <p class="dashboard-eyebrow">Make plans together</p>
+                    <h2>Events near you</h2>
+                </div>
+                <button class="button button-primary" id="show-event-form" type="button">Host an event</button>
+            </div>
+            <form class="event-form" id="event-form" hidden>
+                <input name="title" placeholder="Event name" required>
+                <input name="location" placeholder="Where is it?" required>
+                <input name="event_date" type="datetime-local" required>
+                <select name="category">
+                    <option>Community</option>
+                    <option>Heritage</option>
+                    <option>Creative</option>
+                    <option>Learning</option>
+                </select>
+                <textarea name="description" rows="3" placeholder="Tell people what to expect..." required></textarea>
+                <button class="button button-dark" type="submit">Publish event</button>
+            </form>
+            <div class="event-grid" id="event-list"></div>
+        </section>
+
+        <section class="dashboard-view" id="view-announcements">
+            <div class="section-title-row">
+                <div>
+                    <p class="dashboard-eyebrow">From the team</p>
+                    <h2>Official announcements</h2>
+                </div>
+            </div>
+            <div class="announcement-list" id="announcement-list"></div>
+        </section>
+
+        <section class="dashboard-view" id="view-culture">
+            <div class="section-title-row">
+                <div>
+                    <p class="dashboard-eyebrow">Our shared story</p>
+                    <h2>Culture &amp; heritage</h2>
+                </div>
+            </div>
+            <p class="section-intro">Discover the language, places, food, and creative traditions that make Chorwet feel like home.</p>
+            <div class="culture-grid" id="culture-list"></div>
+        </section>
+
+        <section class="dashboard-view" id="view-about">
+            <div class="about-card">
+                <p class="dashboard-eyebrow">Why we are here</p>
+                <h2>A common place for uncommon stories.</h2>
+                <p>Chorwet Common Place brings people together to share ideas, celebrate heritage, support local creativity, and make meaningful plans.</p>
+                <div class="about-values">
+                    <span><strong>Listen</strong> with curiosity</span>
+                    <span><strong>Share</strong> with generosity</span>
+                    <span><strong>Build</strong> with purpose</span>
+                </div>
+            </div>
+            <div class="pulse-card">
+                <span class="pulse-icon">✦</span>
+                <div>
+                    <p class="dashboard-eyebrow">Weekly community pulse</p>
+                    <h3>What is one tradition you hope the next generation keeps alive?</h3>
+                    <button class="button button-primary" data-view-target="feed" type="button">Share your thought</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="dashboard-view" id="view-profile">
+            <div class="profile-layout">
+                <div class="profile-hero">
+                    <span class="profile-avatar" id="profile-avatar">C</span>
+                    <p class="dashboard-eyebrow">Your identity</p>
+                    <h2 id="profile-display-name">Your profile</h2>
+                    <p class="profile-username" id="profile-username">@username</p>
+                    <p class="profile-id">User ID: <strong id="profile-user-id">—</strong></p>
+                    <div class="profile-stats">
+                        <span><strong id="profile-followers">0</strong> followers</span>
+                        <span><strong id="profile-following">0</strong> following</span>
+                    </div>
+                </div>
+                <form class="profile-form" id="profile-form">
+                    <h3>Edit your profile</h3>
+                    <label>Display name<input id="profile-name-input" name="display_name" maxlength="80" required></label>
+                    <label>Location<input id="profile-location-input" name="location" maxlength="80" placeholder="e.g. Chorwet"></label>
+                    <label>About you<textarea id="profile-bio-input" name="bio" maxlength="280" rows="5" placeholder="What are you curious about?"></textarea></label>
+                    <button class="button button-dark" type="submit">Save profile</button>
+                    <p class="profile-result" id="profile-result" role="status"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+    <script src="/dashboard.js"></script>
+</body>
+</html>

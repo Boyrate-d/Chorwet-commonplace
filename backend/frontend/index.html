@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Chorwet Common Place is a community for sharing ideas, meeting people, and learning together.">
+    <title>Chorwet Common Place - Ideas grow together</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <nav class="nav container" aria-label="Main navigation">
+            <a class="brand" href="index.html" aria-label="Chorwet Common Place home">
+                <span class="brand-mark" aria-hidden="true">
+                    <span></span><span></span><span></span>
+                </span>
+                <span>Chorwet Common Place</span>
+            </a>
+
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+                <span></span><span></span><span></span>
+                <span class="sr-only">Toggle menu</span>
+            </button>
+
+            <div class="nav-links" id="nav-links">
+                <a href="#discover">Discover</a>
+                <a href="#circles">Circles</a>
+                <a href="#about">About</a>
+            </div>
+
+            <div class="nav-actions" id="auth-actions">
+                <a class="button button-ghost" href="login.html">Log in</a>
+                <a class="button button-dark" href="login.html">Join the community</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-grid">
+                <div class="hero-copy">
+                    <p class="eyebrow"><span></span> A community for curious minds</p>
+                    <h1>Good ideas grow <em>better</em> together.</h1>
+                    <p class="hero-lede">Join thoughtful conversations, share what you are learning, and find people who
+                        see the world a little differently.</p>
+                    <div class="hero-actions">
+                        <a class="button button-primary" href="login.html">
+                            Explore the community
+                            <span aria-hidden="true">→</span>
+                        </a>
+                        <a class="text-link" href="#discover">See what's happening <span aria-hidden="true">↓</span></a>
+                    </div>
+                    <div class="member-proof" aria-label="Community member count">
+                        <div class="avatar-stack" aria-hidden="true">
+                            <span class="avatar avatar-one">M</span>
+                            <span class="avatar avatar-two">J</span>
+                            <span class="avatar avatar-three">A</span>
+                        </div>
+                        <p><strong id="member-count">12,000+</strong><br>members learning together</p>
+                    </div>
+                </div>
+
+                <div class="hero-visual" aria-label="Featured community conversation">
+                    <div class="orb orb-one"></div>
+                    <div class="orb orb-two"></div>
+                    <article class="feature-card">
+                        <div class="feature-card-head">
+                            <span class="topic-chip">CREATIVE PRACTICE</span>
+                            <button class="icon-button" type="button" aria-label="Save conversation">☆</button>
+                        </div>
+                        <h2>How do you keep your creative curiosity alive?</h2>
+                        <div class="conversation">
+                            <div class="conversation-person">
+                                <span class="person-avatar person-one">ER</span>
+                                <div>
+                                    <strong>Elena R.</strong>
+                                    <p>I started leaving one question on my desk each morning. It changed how I notice
+                                        the day.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="mini-avatars" aria-hidden="true">
+                                <span>ER</span><span>MK</span><span>+</span>
+                            </div>
+                            <span>28 thoughtful replies</span>
+                        </div>
+                    </article>
+                    <div class="floating-note note-top">
+                        <span class="note-icon">✦</span>
+                        <div><strong>Live conversation</strong>
+                            <p>Designing for belonging</p>
+                        </div>
+                    </div>
+                    <div class="floating-note note-bottom">
+                        <span class="pulse" aria-hidden="true"></span>
+                        <div><strong id="ideas-count">1,248</strong>
+                            <p>ideas shared this week</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="community-strip" id="discover" aria-label="Community topics">
+            <div class="container strip-inner">
+                <p>Explore what people are talking about</p>
+                <div class="topic-list">
+                    <a href="#"><span>01</span> Creative work</a>
+                    <a href="#"><span>02</span> Personal growth</a>
+                    <a href="#"><span>03</span> Better systems</a>
+                    <a href="#"><span>04</span> Culture & ideas</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="circles-section" id="circles">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow"><span></span> Find your people</p>
+                    <h2>Small circles.<br><em>Big conversations.</em></h2>
+                </div>
+                <div class="circle-grid">
+                    <article class="circle-card circle-sage">
+                        <p class="circle-number">01</p>
+                        <h3>The Makers</h3>
+                        <p>For people turning ideas into things—art, products, books, and everything between.</p>
+                        <a href="login.html">Visit circle <span>→</span></a>
+                    </article>
+                    <article class="circle-card circle-blue">
+                        <p class="circle-number">02</p>
+                        <h3>Curious Minds</h3>
+                        <p>A place for generous questions, unexpected connections, and lifelong learning.</p>
+                        <a href="login.html">Visit circle <span>→</span></a>
+                    </article>
+                    <article class="circle-card circle-peach">
+                        <p class="circle-number">03</p>
+                        <h3>Good Work</h3>
+                        <p>Build a more thoughtful working life through honest talk and shared experience.</p>
+                        <a href="login.html">Visit circle <span>→</span></a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section" id="about">
+            <div class="container cta-card">
+                <p class="eyebrow"><span></span> Your place is here</p>
+                <h2>Come as you are.<br><em>Bring what you're curious about.</em></h2>
+                <a class="button button-primary" href="login.html">Create a free account <span>→</span></a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-inner">
+            <a class="brand" href="index.html">
+                <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+                <span>Chorwet Common Place</span>
+            </a>
+            <p>Ideas grow when we share them.</p>
+            <p>© 2026 Chorwet Common Place</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
